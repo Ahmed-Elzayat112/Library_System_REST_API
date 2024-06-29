@@ -1,0 +1,53 @@
+GET http://localhost:3005/authors
+Accept: application/json
+
+###
+
+POST http://localhost:3005/authors
+Content-Type: application/json
+
+{
+    "name": "Ahmed"
+}
+
+###
+
+PUT http://localhost:3005/authors/2
+Content-Type: application/json
+
+{
+    "name": "Omar"
+}
+
+###
+
+DELETE http://localhost:3005/authors/1
+
+###
+
+GET http://localhost:3005/books
+Accept: application/json
+
+###
+
+POST http://localhost:3005/books
+Content-Type: application/json
+
+{
+    "title": "a new book",
+    "authorId": 2
+}
+
+###
+
+PUT http://localhost:3005/books/1
+Content-Type: application/json
+
+{
+    "title": "a new book 2",
+    "author_id": 3
+}
+
+###
+
+DELETE http://localhost:3005/books/1
