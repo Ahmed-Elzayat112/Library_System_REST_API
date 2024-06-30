@@ -46,8 +46,8 @@ exports.getBook = (req, res) => {
 };
 
 exports.createBook = (req, res) => {
-    const book = req.body;
-    Book.create(book)
+    const { title, authorId } = req.body;
+    Book.create({ title: title, authorId: authorId })
         .then((book) => {
             res.json(book);
         })
